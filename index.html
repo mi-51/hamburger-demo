@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>hamburger</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__left">
+                <h1>ハンバーガーメニュー</h1>
+        </div>
+
+        <div class="header__right">
+            
+            <button class="header__right__hamburger">
+                <span class="header__right__hamburger__line"></span>
+                <span class="header__right__hamburger__line"></span>
+                <span class="header__right__hamburger__line"></span>
+            </button>
+            
+            <div class="header__right__menu">
+                <ul>
+                    <li><a href="#">メニュー1</a></li>
+                    <li><a href="#">メニュー2</a></li>
+                    <li><a href="#">メニュー3</a></li>
+                    <li><a href="#">メニュー4</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+    $(function() {
+
+        $('.header__right__hamburger').click(function(){
+            $(this).toggleClass('is-open');
+            $('.header__right__menu').slideToggle(200);
+        });
+
+
+    });    
+    </script>
+    
+</body>
+</html>
